@@ -115,3 +115,8 @@ header{
     margin: 1rem 0 2.4rem;
 }
 
+/*  INICIO Tipo Lixo  */
+.lixos{
+    background: var(--color-bg1);
+}
+
