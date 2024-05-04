@@ -10,6 +10,7 @@
     --color-bg: #1f2641;
     --color-bg1: #2e3267;
     --color-bg3: #414890;
+    --color-success: #00bf8e;
     --color-danger: #f75842;
     --color-warning: #f7c94b;
     --color-danger-variant: rgba(247, 88, 66, 0.4);
@@ -118,5 +119,70 @@ header{
 /*  INICIO Tipo Lixo  */
 .lixos{
     background: var(--color-bg1);
+    height: 29rem;
+}
+.lixos h1{
+    line-height: 1;
+    margin-bottom: 3rem;
 }
 
+.lixos_container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.lixos_left{
+    margin-right: 4rem;
+}
+
+.lixos_left p {
+    margin: 1rem 0 3rem;
+}
+
+.lixos_right{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.lixos_tipo{
+    background: var(--color-bg3);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+
+.lixos_tipo:hover{
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.lixos_tipo:nth-child(2) .lixos_categ_icon{
+    background: var(--color-danger);
+}
+
+.lixos_tipo:nth-child(3) .lixos_categ_icon{
+    background: var(--color-success);
+}
+
+.lixos_tipo:nth-child(4) .lixos_categ_icon{
+    background: var(--color-warning);
+}
+
+.lixos_tipo:nth-child(5) .lixos_categ_icon{
+    background: var(--color-success);
+}
+
+.lixos_categ_icon{
+    background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+
+.lixos_tipo h5{
+    margin: 2rem 0 1rem;
+}
+
+.lixos_tipo p{
+    font-size: 0.85rem;
+}
