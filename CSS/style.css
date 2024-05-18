@@ -256,19 +256,181 @@ header{
 
 /*   RESUMO ESG E PROJETO   */
 
-.post-content{
-    margin-top: 5rem !important;
+.post-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background: var(--color-bg1);
 }
 
-.sub-heading{
-    font-size: 1.2rem;
+.resumo {
+    max-width: 800px; /* Você pode ajustar esse valor conforme necessário */
+    margin: 0 auto;
 }
 
-.post-text{
-    font-size: 1rem;
-    line-height: 1.7rem;
-    margin: 1rem 0 0 18rem;
-    text-align: justify;
-    width: 50vw;
+.post-text, .sub-heading {
+    text-align: center;
+}
+
+.sub-heading{
+    margin-bottom: 0px;
+}
+
+/*  FAQ  */
+
+.faq-section {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    background: var(--color-bg3);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    border-top: 1px solid var(--color-light);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-light);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background: var(--color-primary);
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    color: var(--color-white);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background: var(--color-bg1);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.faq-answer p {
+    padding: 15px;
+    margin: 0;
+}
+
+.faq-question i {
+    transition: transform 0.2s ease-out;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+    .faq-question {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .faq-answer p {
+        padding: 10px;
+    }
+}
+
+/*  FOOTER  */ 
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 0px 0 0px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+.about {
+    text-align: center;
+}
+
+.quick-links {
+    text-align: center;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center; /* Ensure the paragraph text is aligned left */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ddd;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .about, .quick-links {
+        text-align: center;
+    }
 }
