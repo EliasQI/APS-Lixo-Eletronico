@@ -141,7 +141,7 @@ header{
 
 .lixos_right{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
 }
 
@@ -209,8 +209,22 @@ header{
     border-color: var(--color-primary);
 }
 
-.produtores_info{
-    padding: 2rem;
+.produtores_brasil{
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    margin: 1.2rem 9rem;
+}
+
+.produtores_brasil:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+
+.produtores_info {
+    margin: 20px;
 }
 
 .produtores_info p{
@@ -218,13 +232,43 @@ header{
     font-size: 0.9rem;
 }
 
+.produtores_image_percent {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    margin-left: -0.8vw; /* Ajuste se necessário */
+}
+
+.produtores_image_percent img {
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+    width: 50px; /* Ajuste a largura conforme necessário */
+    height: 50px; /* Ajuste a altura conforme necessário */
+    object-fit: contain; /* Garante que a imagem mantenha a proporção */
+}
+
+#descarte{
+    color: red;
+    font-size: 0.9rem;
+}
+
+.descarte_correto{
+    margin: 5px;
+}
+
 /*   RESUMO ESG E PROJETO   */
 
-.centralizado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh; /* Ajusta a altura para ocupar a tela inteira */
-    text-align: center;
-    font-family: Arial, sans-serif;
+.post-content{
+    margin-top: 5rem !important;
+    background: var(--color-bg1);
+}
+
+.sub-heading{
+    font-size: 1.2rem;
+}
+
+.post-text{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin: 1rem 0 0 18rem;
+    text-align: justify;
+    width: 50vw;
 }
